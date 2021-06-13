@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void selection_sort(int arr[] , int n)
+void insertion_sort(int arr[] , int n)
 {
   for(int i=1;i<n-1;i++){
     int current = arr[i];
@@ -34,7 +34,7 @@ int main()
   for(int i=0;i<n;i++)
       cout<<a[i]<<" ";
 
-  selection_sort(a,n);
+  insertion_sort(a,n);
 
   return 0;
 
