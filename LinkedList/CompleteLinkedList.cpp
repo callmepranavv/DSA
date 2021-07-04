@@ -133,7 +133,7 @@ int Search(Node *head, int x)
 
 
 //Linked List traversal
-void print(Node *head)							//Linked List traversal
+void print(Node *head)							
 {
 	while(head != NULL)
 	{
@@ -173,6 +173,6 @@ int main()
   cout<<endl;
 
 
-	cout<<"Position of element in Linked List: "<<Search(head,20)<<endl;;
+  cout<<"Position of element in Linked List: "<<Search(head,20)<<endl;;
   return 0;
 }
