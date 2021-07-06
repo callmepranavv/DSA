@@ -90,21 +90,21 @@ Node *DeleteHead(Node* head)
 //Delete kth node in an Circular LL
 Node *DeleteKth(Node *head , int k)
 {
-	if(head == NULL)	return NULL;			//Corner case if LL is NULL/Empty
+	if(head == NULL)	return NULL;		//Corner case if LL is NULL/Empty
 
 	if(k == 1)						
 	{
-		return DeleteHead(head);					//Case where k=1 ie delete 1st element ==> same as deleting the head
+		return DeleteHead(head);		//Case where k=1 ie delete 1st element ==> same as deleting the head
   }
 
   Node *curr  = head;
-  for(int i = 0 ; i < k-2 ; i++)     	//Loop to reach the k-1th element for the kth element to be deleted
+  for(int i = 0 ; i < k-2 ; i++)     	  		//Loop to reach the k-1th element for the kth element to be deleted
   		curr = curr->next;
 
   Node *temp = curr->next;						
   curr->next = curr->next->next;			//make next.next element as next 
 
-  delete temp;												//Delete the temp ie curr.next
+  delete temp;						//Delete the temp ie curr.next
   return head;
 }
 
