@@ -69,12 +69,12 @@ Node *InsertEnd(Node *head , int x)
 //Delete head in an Circular LL
 Node *DeleteHead(Node* head)
 {
-	if(head == NULL)	return NULL;			//Corner case if LL is NULL/Empty
+	if(head == NULL)	return NULL;		//Corner case if LL is NULL/Empty
 
 	if(head->next ==head)
 	{
 		delete head;
-		return NULL;											//Corner Case if only 1 ele in LL
+		return NULL;				//Corner Case if only 1 ele in LL
 	}
 
 	head->data = head->next->data;			// Copy head.next data into head
@@ -82,8 +82,8 @@ Node *DeleteHead(Node* head)
 	Node *temp = head->next;
 	head->next = head->next->next;			// make head.next as head.next.next
 
-	delete temp;												//Delete the temp ie curr.next
-	return head;												// return head
+	delete temp;					//Delete the temp ie curr.next
+	return head;					// return head
 }
 
 
