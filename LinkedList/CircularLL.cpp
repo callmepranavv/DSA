@@ -22,20 +22,20 @@ Node * InsertBegin(Node *head , int x)
 
 	if(head == NULL)
 	{
-		temp->next = temp;									//Corner case if LL is NULL/Empty
+		temp->next = temp;		//Corner case if LL is NULL/Empty
 		return temp;
 	}
 
 	else
 	{
-		temp->next = head->next;						//Insert temp after head
+		temp->next = head->next;	//Insert temp after head
 		head->next = temp;
 
 		int t = head->data;
-		head->data = temp->data;						//Swap data of temp and head
+		head->data = temp->data;	//Swap data of temp and head
 		temp->data = t;
 
-		return head;												//return head as head
+		return head;			//return head as head
 	}
 }
 
