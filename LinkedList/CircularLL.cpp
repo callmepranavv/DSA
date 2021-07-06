@@ -47,20 +47,20 @@ Node *InsertEnd(Node *head , int x)
 
 	if(head == NULL)
 	{
-		temp->next = temp;								//Corner case if LL is NULL/Empty
+		temp->next = temp;			//Corner case if LL is NULL/Empty
 		return temp;
 	}
 
 	else
 	{
-		temp -> next = head ->next;				//Insert temp after head
+		temp -> next = head ->next;		//Insert temp after head
 		head->next = temp;
 
-		int t = temp->data;								//Swap data of temp and head
+		int t = temp->data;			//Swap data of temp and head
 		temp->data = head->data;
 		head->data = t;
 
-		return temp;											//return temp as the new head
+		return temp;				//return temp as the new head
 
 	}
 }
